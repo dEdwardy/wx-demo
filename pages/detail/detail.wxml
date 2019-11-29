@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <view class="title">{{ detail.title }} </view>
+  <view class="info">
+      <view class="left">
+        <text wx:if="{{ detail.user }}" class="txt">Author:</text>  
+        <text wx:if="{{ detail.user }}" class="author">{{ detail.user.username }}</text> 
+      </view>
+      <view class="right">
+        <text class="txt">Created:</text>  
+        <text class="date">{{ detail.created }}</text>
+      </view>
+    </view>
+  <view class="content">{{ detail.body }} </view>
+</view>

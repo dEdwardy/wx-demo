@@ -1,0 +1,17 @@
+<!--pages/list/list.wxml-->
+<view class="list"> 
+  <view wx:for="{{ list }}" wx:for-index="idx" wx:for-item="item" wx:key="item.id" 
+  class="item" data-id="{{item.id}}" bindlongtap="seeDetail">
+    <view class="title"> {{ item.title}} </view>
+    <view class="info">
+      <view class="left">
+        <text wx:if="{{ item.user }}" class="txt">Author:</text>  
+        <text wx:if="{{ item.user }}" class="author">{{ item.user.username }}</text> 
+      </view>
+      <view class="right">
+        <text class="txt">Created:</text>  
+        <text class="date">{{ item.created }}</text>
+      </view>
+    </view>
+  </view>
+</view>

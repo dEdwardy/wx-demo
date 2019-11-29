@@ -1,0 +1,27 @@
+/* pages/list/list.wxss */
+.item{
+  margin:30rpx 0;
+  padding: 20rpx;
+}
+.item:hover, .item:visited{
+  background: #eee;
+}
+.item .title{
+  margin-bottom: 10rpx;
+}
+.item .txt{
+  margin:10rpx 20rpx 10rpx 0;
+}
+.item .author{
+  color: #78a5f1;
+}
+.item .date{
+  color:#858585;
+}
+
+.item .info {
+  display: flex;
+  justify-content:space-between;
+  flex-direction: row;
+  font-size: 12px;
+}

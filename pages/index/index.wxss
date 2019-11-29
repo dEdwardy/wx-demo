@@ -1,0 +1,22 @@
+/**index.wxss**/
+.login-form{
+  margin-top:280rpx;
+  display: flex;
+  flex-direction: column;
+}
+.username{
+  border-bottom: 1px solid #eee;
+}
+.password{
+  margin-top:20px;
+  border-bottom: 1px solid #eee;
+}
+.center{
+  text-align: center;
+}
+.login-btn{
+  width:320rpx;
+  height: 80rpx;
+  line-height:80rpx;
+  margin-bottom: 100rpx;
+}
