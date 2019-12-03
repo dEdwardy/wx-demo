@@ -14,7 +14,12 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+const formatMinutes = seconds => {
+  const s = seconds% 60;
+  const m = parseInt(seconds/60);
+  return `m:s`
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatMinutes
 }

@@ -1,0 +1,10 @@
+<!--pages/map/map.wxml-->
+<view class="map">
+  <view class="container">
+    <map longitude="{{ longitude }}" show-location="true" latitude="{{ latitude }}"></map>
+    <view class="operate">
+      <button bindtap="chooseLocation">选择地址</button>
+      <button bindtap="seeLogs">查看日志</button>
+    </view>
+  </view>
+</view>

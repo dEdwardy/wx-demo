@@ -1,0 +1,19 @@
+<!--pages/music/music.wxml-->
+<!-- <wxs module="music">
+var a = 0; 
+var formatMinutes = seconds => {
+  var s = seconds% 60;
+  var m = parseInt(seconds/60);
+  return m==0? `0分s秒`:`m分s秒`
+}
+module.exports = { a:a }
+</wxs> -->
+<view class="music">
+<audio name="{{name}}" poster="{{ poster }}" author="{{author}}" src="{{src}}" id="myAudio" bindplay="bindplay" bindtimeupdate="tiemUpdate" controls loop></audio>
+<view class="custom-control">
+  <slider class="slider" bindchange="sliderChange" block-size="14"
+  value="{{ current }}" min="0" max="{{ duration }}" />
+  <cover-image class="bf" bindtap="audioPause"  hidden="{{ !isPlay }}" src="{{ bfSrc }}"></cover-image>
+  <cover-image class="zt" bindtap="audioPlay" hidden="{{ isPlay }}" src="{{ ztSrc }}"></cover-image>
+</view>
+</view>

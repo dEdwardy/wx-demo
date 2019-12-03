@@ -1,0 +1,23 @@
+/* pages/music/music.wxss */
+.music {
+  text-align: center;
+}
+button {
+  margin:20rpx 0;
+}
+.slider{
+  width:520rpx;
+  margin-left: 88rpx;
+}
+.custom-control{
+  flex-direction: row;
+  margin: 0 autyo;
+  position: relative;
+}
+.bf,.zt{
+  position: absolute;
+  top: -3rpx;
+  right: 80rpx;
+  width: 40rpx;
+  height: 40rpx;
+}

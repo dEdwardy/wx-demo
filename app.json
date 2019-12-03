@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/music/music",
     "pages/list/list",
     "pages/index/index",
+    "pages/map/map",
     "pages/logs/logs",
     "pages/detail/detail"
   ],
@@ -10,6 +12,31 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "文章"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
