@@ -21,3 +21,6 @@ button {
   width: 40rpx;
   height: 40rpx;
 }
+.upload{
+  padding: 20rpx 60rpx
+}

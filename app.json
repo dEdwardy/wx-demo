@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/music/music",
     "pages/list/list",
-    "pages/index/index",
     "pages/map/map",
     "pages/logs/logs",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/form/form"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,7 +18,7 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "index"
+        "text": "Index"
       },
       {
         "pagePath": "pages/list/list",
@@ -30,6 +31,10 @@
       {
         "pagePath": "pages/music/music",
         "text": "音乐"
+      },
+      {
+        "pagePath": "pages/form/form",
+        "text": "表单"
       }
     ]
   },

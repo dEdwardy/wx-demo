@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {} }; __MODS__[
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = { exports: {} }; __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); if(typeof m.exports === "object") { __MODS__[modId].m.exports.__proto__ = m.exports.__proto__; Object.keys(m.exports).forEach(function(k) { __MODS__[modId].m.exports[k] = m.exports[k]; var desp = Object.getOwnPropertyDescriptor(m.exports, k); if(desp && desp.configurable) Object.defineProperty(m.exports, k, { set: function(val) { __MODS__[modId].m.exports[k] = val; }, get: function() { return __MODS__[modId].m.exports[k]; } }); }); if(m.exports.__esModule) Object.defineProperty(__MODS__[modId].m.exports, "__esModule", { value: true }); } else { __MODS__[modId].m.exports = m.exports; } } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1575249510918, function(require, module, exports) {
+__DEFINE__(1575424411387, function(require, module, exports) {
 var __TEMP__ = require('./src/lib/method.js');var method = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./src/lib/parameter.js');var parameter = __REQUIRE_DEFAULT__(__TEMP__);
 var __TEMP__ = require('./src/lib/mixin.js');var mixin = __REQUIRE_DEFAULT__(__TEMP__);
@@ -46,8 +46,8 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
   }
   return api.build(options, proxy)
 };
-}, function(modId) {var map = {"./src/lib/method.js":1575249510919,"./src/lib/parameter.js":1575249510920,"./src/lib/mixin.js":1575249510922,"./src/lib/intercept.js":1575249510924,"./src/CopyProxy":1575249510925,"./utils/finally":1575249510926}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510919, function(require, module, exports) {
+}, function(modId) {var map = {"./src/lib/method.js":1575424411388,"./src/lib/parameter.js":1575424411389,"./src/lib/mixin.js":1575424411391,"./src/lib/intercept.js":1575424411393,"./src/CopyProxy":1575424411394,"./utils/finally":1575424411395}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1575424411388, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function method(api){
   //所有request支持method
   const config = [
@@ -66,7 +66,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510920, function(require, module, exports) {
+__DEFINE__(1575424411389, function(require, module, exports) {
 var __TEMP__ = require('./interceptors.js');var interceptors = __REQUIRE_DEFAULT__(__TEMP__);
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function parameter(api){
   api.defaults = {
@@ -84,8 +84,8 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
   }
 };
 
-}, function(modId) { var map = {"./interceptors.js":1575249510921}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510921, function(require, module, exports) {
+}, function(modId) { var map = {"./interceptors.js":1575424411390}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1575424411390, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function interceptors() {
   return {
     use(resolve, reject) {
@@ -102,7 +102,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510922, function(require, module, exports) {
+__DEFINE__(1575424411391, function(require, module, exports) {
 var __TEMP__ = require('../../utils/common');var isProtocol = __TEMP__['isProtocol'];
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function mixin(api){
   api.dataMerging = function (fnData, url, data) {
@@ -124,8 +124,8 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
     ['dataType', 'responseType', 'header'].forEach(val => fnData[val] = fnData[val] ? fnData[val] : this.defaults[val])
   }
 };
-}, function(modId) { var map = {"../../utils/common":1575249510923}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510923, function(require, module, exports) {
+}, function(modId) { var map = {"../../utils/common":1575424411392}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1575424411392, function(require, module, exports) {
 /**
  * 克隆一个全新对象，但不能对dom对象和function
  * */
@@ -136,7 +136,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
   return b.test(str)
 };
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510924, function(require, module, exports) {
+__DEFINE__(1575424411393, function(require, module, exports) {
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = function intercept(api){
   //包装成Promise返回
   api.method = function ({ url, data, method, api = 'request' }) {
@@ -172,7 +172,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510925, function(require, module, exports) {
+__DEFINE__(1575424411394, function(require, module, exports) {
 // import { newObj } from '../utils/common'
 //用以代理abi，生成wx.api的Promise
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = class CopyProxy {
@@ -230,7 +230,7 @@ if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: t
   }
 };
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1575249510926, function(require, module, exports) {
+__DEFINE__(1575424411395, function(require, module, exports) {
 function getFinally(){
   Promise.prototype.finally = function (callback) {
     let P = this.constructor;
@@ -243,6 +243,6 @@ function getFinally(){
 if (!exports.__esModule) Object.defineProperty(exports, "__esModule", { value: true });exports.default = getFinally;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1575249510918);
+return __REQUIRE__(1575424411387);
 })()
 //# sourceMappingURL=index.js.map

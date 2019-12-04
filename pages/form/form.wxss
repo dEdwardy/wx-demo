@@ -1,0 +1,3 @@
+.page__title,.page__desc{
+  padding:16rpx 32rpx;
+}

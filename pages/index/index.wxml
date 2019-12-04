@@ -5,6 +5,6 @@
     <input class="password" style="text-align: center" maxlength="12" password bindinput="inputPass" placeholder="密码" placeholder-class="center"/>
   </view>
   <view>
-   <button class="login-btn" bindtap="login">登录</button>
+    <button class="weui-btn" type="primary" bindtap="login">登录</button>
   </view>
 </view>

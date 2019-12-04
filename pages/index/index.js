@@ -13,6 +13,11 @@ Page({
     username: '',
     password: ''
   },
+  jump(){
+    wx.navigateTo({
+      url: '../test/test',
+    })
+  },
   //事件处理函数
   inputName(e) {
     this.username = e.detail.value.trim();

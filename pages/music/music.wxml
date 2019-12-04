@@ -9,11 +9,17 @@ var formatMinutes = seconds => {
 module.exports = { a:a }
 </wxs> -->
 <view class="music">
-<audio name="{{name}}" poster="{{ poster }}" author="{{author}}" src="{{src}}" id="myAudio" bindplay="bindplay" bindtimeupdate="tiemUpdate" controls loop></audio>
-<view class="custom-control">
-  <slider class="slider" bindchange="sliderChange" block-size="14"
-  value="{{ current }}" min="0" max="{{ duration }}" />
-  <cover-image class="bf" bindtap="audioPause"  hidden="{{ !isPlay }}" src="{{ bfSrc }}"></cover-image>
-  <cover-image class="zt" bindtap="audioPlay" hidden="{{ isPlay }}" src="{{ ztSrc }}"></cover-image>
+  <audio name="{{name}}" poster="{{ poster }}" author="{{author}}" src="{{src}}" id="myAudio" bindplay="audioPlay"
+  bindpause="audioPause" bindtimeupdate="tiemUpdate" controls loop></audio>
+  <view class="custom-control">
+    <slider class="slider" bindchange="sliderChange" block-size="14" value="{{ current }}" min="0" max="{{ duration }}" />
+    <cover-image class="bf" bindtap="audioPause" hidden="{{ !isPlay }}" src="{{ bfSrc }}"></cover-image>
+    <cover-image class="zt" bindtap="audioPlay" hidden="{{ isPlay }}" src="{{ ztSrc }}"></cover-image>
+  </view>
+  <text>{{ now }}</text> <text style="color:gray">/{{ total }}</text>
 </view>
+<view class="upload">
+ <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" 
+ upload="{{uplaodFile}}" files="{{files}}" max-count="5" binddelete="deleteImg" title="图片上传" 
+ tips="图片上传提示"></mp-uploader>
 </view>

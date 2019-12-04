@@ -1,6 +1,5 @@
 // pages/map/map.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -38,7 +37,6 @@ Page({
       altitude: true,
       isHighAccuracy: true,
       success(res) {
-        console.log(res)
         if(res){
           _this.setData({
             longitude: res.longitude,
